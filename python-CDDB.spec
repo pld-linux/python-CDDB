@@ -4,7 +4,7 @@ Summary:	Module for accessing CDDB and FreeDB
 Summary(pl):	Modu³ do ³±czenia z bazami CDDB i FreeDB
 Name:		python-%{module}
 Version:	1.4
-Release:	0.1
+Release:	1
 License:	GNU
 Group:		Development/Languages/Python
 Source0:	http://cddb-py.sourceforge.net/%{module}-%{version}.tar.gz
@@ -40,7 +40,8 @@ install -d $RPM_BUILD_ROOT%{py_sitedir}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install cddb-info.py $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 python setup.py install \
-        --root=$RPM_BUILD_ROOT --optimize=2
+	--root=$RPM_BUILD_ROOT \
+	--optimize=2
 
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.py
 
