@@ -13,7 +13,6 @@ URL:		http://cddb-py.sourceforge.net/
 %pyrequires_eq	python-modules
 BuildRequires:	python >= 1:2.3
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
