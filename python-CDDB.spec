@@ -11,7 +11,7 @@ Source0:	http://cddb-py.sourceforge.net/%{module}-%{version}.tar.gz
 # Source0-md5:	254698082bafe3030d07d88fb7e13fe2
 URL:		http://cddb-py.sourceforge.net/
 %pyrequires_eq	python-modules
-BuildRequires:	python-devel >= 2.3
+BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
