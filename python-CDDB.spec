@@ -4,13 +4,14 @@ Summary:	Module for accessing CDDB and FreeDB
 Summary(pl):	Modu³ do ³±czenia z bazami CDDB i FreeDB
 Name:		python-%{module}
 Version:	1.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://cddb-py.sourceforge.net/%{module}-%{version}.tar.gz
 # Source0-md5:	254698082bafe3030d07d88fb7e13fe2
 URL:		http://cddb-py.sourceforge.net/
 %pyrequires_eq	python-modules
+BuildRequires:	python >= 1:2.3
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
