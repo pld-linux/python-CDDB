@@ -33,7 +33,7 @@ pod Linuksem, FreeBSD, OpenBSD, MacOS X, Solarisem i Win32.
 
 %build
 CFLAGS="%{rpmcflags}"
-export CLFAGS
+export CFLAGS
 python setup.py build
 
 %install
