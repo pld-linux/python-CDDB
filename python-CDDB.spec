@@ -1,4 +1,4 @@
-%define         module CDDB
+%define		module CDDB
 
 Summary:	Module for accessing CDDB and FreeDB
 Summary(pl):	Modu³ do ³±czenia z bazami CDDB i FreeDB
