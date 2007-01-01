@@ -10,9 +10,10 @@ Group:		Development/Languages/Python
 Source0:	http://cddb-py.sourceforge.net/%{module}-%{version}.tar.gz
 # Source0-md5:	254698082bafe3030d07d88fb7e13fe2
 URL:		http://cddb-py.sourceforge.net/
+BuildRequires:	python >= 1:2.5
+BuildRequires:	python-devel >= 1:2.5
 %pyrequires_eq	python-modules
-BuildRequires:	python >= 1:2.3
-BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,5 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README CHANGES
 %{py_sitedir}/*.py[co]
+%{py_sitedir}/CDDB-*.egg-info
 %attr(755,root,root) %{py_sitedir}/cdrom.so
 %{_examplesdir}/%{name}-%{version}
