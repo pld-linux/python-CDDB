@@ -1,7 +1,7 @@
 %define		module	CDDB
 
 Summary:	Module for accessing CDDB and FreeDB
-Summary(pl):	Modu≥ do ≥±czenia z bazami CDDB i FreeDB
+Summary(pl.UTF-8):   Modu≈Ç do ≈ÇƒÖczenia z bazami CDDB i FreeDB
 Name:		python-%{module}
 Version:	1.4
 Release:	5
@@ -23,10 +23,10 @@ extension module to fetch track lengths under Linux, FreeBSD, OpenBSD,
 Mac OS X, Solaris, and Win32, which is easily ported to other
 operating systems.
 
-%description -l pl
-Jest to zestaw trzech modu≥Ûw umoøliwiaj±cych po≥±czenie z bazami CDDB
-i FreeDB w celu pobierania tytu≥Ûw i informacji o ∂cieøkach p≥yt CD.
-Pakiet zawiera teø modu≥ w C do wyci±gania d≥ugo∂ci ∂cieøek dzia≥aj±cy
+%description -l pl.UTF-8
+Jest to zestaw trzech modu≈Ç√≥w umo≈ºliwiajƒÖcych po≈ÇƒÖczenie z bazami CDDB
+i FreeDB w celu pobierania tytu≈Ç√≥w i informacji o ≈õcie≈ºkach p≈Çyt CD.
+Pakiet zawiera te≈º modu≈Ç w C do wyciƒÖgania d≈Çugo≈õci ≈õcie≈ºek dzia≈ÇajƒÖcy
 pod Linuksem, FreeBSD, OpenBSD, MacOS X, Solarisem i Win32.
 
 %prep
