@@ -1,7 +1,7 @@
 %define		module	CDDB
 
 Summary:	Module for accessing CDDB and FreeDB
-Summary(pl.UTF-8):   Moduł do łączenia z bazami CDDB i FreeDB
+Summary(pl.UTF-8):	Moduł do łączenia z bazami CDDB i FreeDB
 Name:		python-%{module}
 Version:	1.4
 Release:	5
