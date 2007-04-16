@@ -1,12 +1,12 @@
 %define		module	CDDB
 
 Summary:	Module for accessing CDDB and FreeDB
-Summary(pl.UTF-8):	Moduł do łączenia z bazami CDDB i FreeDB
+Summary(pl.UTF-8):	Moduł dostępu do baz CDDB i FreeDB
 Name:		python-%{module}
 Version:	1.4
 Release:	5
 License:	GPL
-Group:		Development/Languages/Python
+Group:		Libraries/Python
 Source0:	http://cddb-py.sourceforge.net/%{module}-%{version}.tar.gz
 # Source0-md5:	254698082bafe3030d07d88fb7e13fe2
 URL:		http://cddb-py.sourceforge.net/
@@ -14,6 +14,7 @@ BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 %pyrequires_eq	python-modules
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,9 +25,9 @@ Mac OS X, Solaris, and Win32, which is easily ported to other
 operating systems.
 
 %description -l pl.UTF-8
-Jest to zestaw trzech modułów umożliwiających połączenie z bazami CDDB
-i FreeDB w celu pobierania tytułów i informacji o ścieżkach płyt CD.
-Pakiet zawiera też moduł w C do wyciągania długości ścieżek działający
+Jest to zestaw trzech modułów umożliwiających dostęp do baz CDDB i
+FreeDB w celu pobierania tytułów i informacji o ścieżkach płyt CD.
+Pakiet zawiera też moduł w C do wyciągania długości ścieżek, działający
 pod Linuksem, FreeBSD, OpenBSD, MacOS X, Solarisem i Win32.
 
 %prep
@@ -47,7 +48,7 @@ python setup.py install \
 
 install cddb-info.py $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.py
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
