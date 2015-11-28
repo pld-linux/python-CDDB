@@ -34,17 +34,13 @@ pod Linuksem, FreeBSD, OpenBSD, MacOS X, Solarisem i Win32.
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{rpmcflags}"
-export CFLAGS
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir},%{_examplesdir}/%{name}-%{version}}
 
-python setup.py install \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_install
 
 install cddb-info.py $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
